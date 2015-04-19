@@ -68,11 +68,11 @@ Find if a given number is a Kaprekar number.
     k == first_half.to_i + second_half.to_i
   end
   
-  #=> returns true for 9
-  #=> returns false for 46
-  #=> returns true for 55
-  #=> returns true for 297
-  #=> returns false for 90
+    #=> returns true for 9
+    #=> returns false for 46
+    #=> returns true for 55
+    #=> returns true for 297
+    #=> returns false for 90
   
 Enough Contrast?
 -------------
@@ -123,13 +123,13 @@ Find out if the given color combos have sufficient contrast and get all the test
     end
   end
   
-  initializes the color with the RGB values 
-  returns the correct brightness index for (42, 21, 58) 
-  returns the correct brightness index for (100, 200, 255) 
-  returns the correct brighness difference between 2 colors 
-  returns the correct hue difference between 2 colors 
-  tells that there is is not enough contrast between (42, 21, 58) and (240, 41, 25) 
-  tells that there is is enough contrast between (42, 42, 42) and (210, 210, 210)
+    initializes the color with the RGB values 
+    returns the correct brightness index for (42, 21, 58) 
+    returns the correct brightness index for (100, 200, 255) 
+    returns the correct brighness difference between 2 colors 
+    returns the correct hue difference between 2 colors 
+    tells that there is is not enough contrast between (42, 21, 58) and (240, 41, 25) 
+    tells that there is is enough contrast between (42, 42, 42) and (210, 210, 210)
   
 Time to run code
 ------------------
