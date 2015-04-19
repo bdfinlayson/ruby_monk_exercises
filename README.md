@@ -13,13 +13,13 @@ You need to write a method called non_duplicated_values to accomplish this task.
 Given [1,2,2,3,3,4,5], the method should return [1,4,5]
 
 ####Solution:
-
-  def non_duplicated_values(values)
-    values.select { |x| values.count(x) == 1 } #you can also use the `find_all` method in place of `select`
-  end
   
-  #=> returns [1,4,5], given [1,2,2,3,3,4,5]
-  #=> returns [1,3], given [1,2,2,3,4,4]
+    def non_duplicated_values(values)
+      values.select { |x| values.count(x) == 1 } #you can also use the `find_all` method in place of `select`
+    end
+    
+    #=> returns [1,4,5], given [1,2,2,3,3,4,5]
+    #=> returns [1,3], given [1,2,2,3,4,4]
 
 Check if all elements in an array are Fixnum
 -----------------------------------------------------------------
@@ -33,16 +33,16 @@ Given [1,2,3], the method should return true
 
 ####Solution
 
-  def array_of_fixnums?(array)
-    array.all? { |x| x.is_a? Fixnum }
-  end
+    def array_of_fixnums?(array)
+      array.all? { |x| x.is_a? Fixnum }
+    end
 
 #####An alternative solution might be:
-
-  def array_of_fixnums?(array)
-    y = array.find_all { |x| x.is_a? Fixnum }
-    y.size == array.size ? true : false
-  end
+  
+    def array_of_fixnums?(array)
+      y = array.find_all { |x| x.is_a? Fixnum }
+      y.size == array.size ? true : false
+    end
   
 Kaprekar's Number
 ------------------------
@@ -76,7 +76,7 @@ Find if a given number is a Kaprekar number.
   
 Enough Contrast?
 -------------
-Problem Statement
+####  Problem Statement
 For 2 Colors in RGB: 
 (R1, G1, B1) and (R2, G2, B2),
 
@@ -143,15 +143,15 @@ You may use Time.now to get the current time.
 
 ####Solution:
 
-  def exec_time(proc)
-    begin_time = Time.now
-    proc.call
-    Time.now - begin_time
-  end
-  
-  #=> takes more time to execute a task 10 times 
-  #=> division takes more time than addition 
-  #=> Array::find takes more time than Array::[] 
+    def exec_time(proc)
+      begin_time = Time.now
+      proc.call
+      Time.now - begin_time
+    end
+    
+    #=> takes more time to execute a task 10 times 
+    #=> division takes more time than addition 
+    #=> Array::find takes more time than Array::[] 
   
 Number shuffle
 ----------
@@ -165,13 +165,13 @@ Return: [123, 132, 213, 231, 312, 321]
 
 ####Solution:
 
-  def number_shuffle(number)
-    no_of_combinations = number.to_s.size == 3 ? 6 : 24
-    digits = number.to_s.split(//)
-    combinations = []
-    combinations << digits.shuffle.join.to_i while combinations.uniq.size!=no_of_combinations
-    combinations.uniq.sort
-  end
-  
-  #=> returns [123, 132, 213, 231, 312, 321] for 123 ✔
-  #=> returns [1234, 1243, 1324, 1342, 1423, 1432, 2134, 2143, 2314, 2341, 2413, 2431, 3124, 3142, 3214, 3241, 3412, 3421, 4123, 4132, 4213, 4231, 4312, 4321] for 1234
+    def number_shuffle(number)
+      no_of_combinations = number.to_s.size == 3 ? 6 : 24
+      digits = number.to_s.split(//)
+      combinations = []
+      combinations << digits.shuffle.join.to_i while combinations.uniq.size!=no_of_combinations
+      combinations.uniq.sort
+    end
+    
+    #=> returns [123, 132, 213, 231, 312, 321] for 123 ✔
+    #=> returns [1234, 1243, 1324, 1342, 1423, 1432, 2134, 2143, 2314, 2341, 2413, 2431, 3124, 3142, 3214, 3241, 3412, 3421, 4123, 4132, 4213, 4231, 4312, 4321] for 1234
